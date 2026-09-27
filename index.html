@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ProyecLab V7 | Descubre Sausal</title>
+
+  <meta
+    name="description"
+    content="ProyecLab: descubre lugares, negocios, servicios, instituciones, educación, cultura e historia de Sausal."
+  >
+
+  <!-- ICONO DEL SITIO -->
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b1220'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-size='55'%3EP%3C/text%3E%3C/svg%3E"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       FONDO GENERAL
+  ========================== -->
+  <div class="site-background">
+    <div class="background-photo"></div>
+    <div class="background-overlay"></div>
+
+    <div class="particles">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+  <header class="navbar">
+
+    <div class="nav-container">
+
+      <a href="#inicio" class="logo">
+        <span class="logo-icon">P</span>
+        <span>
+          <strong>ProyecLab</strong>
+          <small>Descubre Sausal</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle">
+        ☰
+      </button>
+
+      <nav id="mainNav">
+        <a href="#inicio">Inicio</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#explorar">Explorar</a>
+        <a href="#historia">Historia</a>
+        <a href="#proyecto">Proyecto</a>
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+    <section class="hero" id="inicio">
+
+      <div class="hero-content">
+
+        <div class="hero-badge">
+          PROYECTO EPT • SAUSAL
+        </div>
+
+        <h1>
+          Descubre
+          <span>Sausal</span>
+        </h1>
+
+        <p>
+          Conoce los lugares, negocios, servicios, instituciones,
+          educación, cultura e historia de nuestra comunidad.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#categorias" class="btn primary">
+            Explorar Sausal
+          </a>
+
+          <a href="#historia" class="btn secondary">
+            Ver historia
+          </a>
+
+        </div>
+
+        <div class="hero-info">
+
+          <span>☀️ Tierra del Eterno Sol</span>
+          <span>📍 Sausal</span>
+          <span>🌎 La Libertad</span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CATEGORÍAS
+    ========================== -->
+    <section class="section" id="categorias">
+
+      <div class="section-title">
+
+        <span class="section-tag">
+          EXPLORA
+        </span>
+
+        <h2>
+          Todo Sausal en un solo lugar
+        </h2>
+
+        <p>
+          Encuentra información organizada de los principales
+          lugares, servicios e instituciones de nuestra comunidad.
+        </p>
+
+      </div>
+
+
+      <div class="category-grid">
+
+        <button class="category-card" data-category="comida">
+          <span class="category-icon">🍽️</span>
+          <strong>Comida</strong>
+          <small>Restaurantes y pollerías</small>
+        </button>
+
+        <button class="category-card" data-category="servicios">
+          <span class="category-icon">🛍️</span>
+          <strong>Servicios</strong>
+          <small>Comercios y servicios</small>
+        </button>
+
+        <button class="category-card" data-category="educacion">
+          <span class="category-icon">🎓</span>
+          <strong>Educación</strong>
+          <small>Colegios y jardines</small>
+        </button>
+
+        <button class="category-card" data-category="lugares">
+          <span class="category-icon">📍</span>
+          <strong>Lugares</strong>
+          <small>Parques y espacios</small>
+        </button>
+
+        <button class="category-card" data-category="instituciones">
+          <span class="category-icon">🏛️</span>
+          <strong>Instituciones</strong>
+          <small>Entidades de la comunidad</small>
+        </button>
+
+        <button class="category-card" data-category="transporte">
+          <span class="category-icon">🚌</span>
+          <strong>Transporte</strong>
+          <small>Terminales y colectivos</small>
+        </button>
+
+        <button class="category-card" data-category="cultura">
+          <span class="category-icon">🎭</span>
+          <strong>Cultura</strong>
+          <small>Tradiciones y festividades</small>
+        </button>
+
+        <button class="category-card" data-category="historia">
+          <span class="category-icon">📜</span>
+          <strong>Historia</strong>
+          <small>Conoce nuestro pasado</small>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXPLORAR
+    ========================== -->
+    <section class="section explore-section" id="explorar">
+
+      <div class="section-title">
+
+        <span class="section-tag">
+          GUÍA LOCAL
+        </span>
+
+        <h2>
+          Explora lugares de Sausal
+        </h2>
+
+        <p>
+          Busca rápidamente un lugar o filtra la información
+          según lo que necesitas.
+        </p>
+
+      </div>
+
+
+      <div class="search-box">
+
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="🔎 Buscar un lugar, negocio, colegio..."
+        >
+
+        <button id="clearSearch">
+          Limpiar
+        </button>
+
+      </div>
+
+
+      <div class="filter-buttons">
+
+        <button class="filter-btn active" data-filter="todos">
+          Todos
+        </button>
+
+        <button class="filter-btn" data-filter="comida">
+          🍽️ Comida
+        </button>
+
+        <button class="filter-btn" data-filter="servicios">
+          🛍️ Servicios
+        </button>
+
+        <button class="filter-btn" data-filter="educacion">
+          🎓 Educación
+        </button>
+
+        <button class="filter-btn" data-filter="lugares">
+          📍 Lugares
+        </button>
+
+        <button class="filter-btn" data-filter="instituciones">
+          🏛️ Instituciones
+        </button>
+
+        <button class="filter-btn" data-filter="transporte">
+          🚌 Transporte
+        </button>
+
+        <button class="filter-btn" data-filter="cultura">
+          🎭 Cultura
+        </button>
+
+      </div>
+
+
+      <div class="places-grid" id="placesGrid">
+        <!-- JS genera las tarjetas -->
+      </div>
+
+      <div class="no-results" id="noResults">
+        <span>🔎</span>
+        <h3>No encontramos resultados</h3>
+        <p>Prueba con otro nombre o categoría.</p>
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         HISTORIA DE SAUSAL
+    ========================== -->
+    <section class="section history-section" id="historia">
+
+      <div class="section-title">
+
+        <span class="section-tag">
+          NUESTRA IDENTIDAD
+        </span>
+
+        <h2>
+          Historia de Sausal
+        </h2>
+
+        <p>
+          Conocer nuestra historia también es una forma de valorar
+          nuestra comunidad.
+        </p>
+
+      </div>
+
+
+      <div class="history-card">
+
+        <div class="history-icon">
+          📜
+        </div>
+
+        <div class="history-content">
+
+          <h3>
+            Sausal, Tierra del Eterno Sol
+          </h3>
+
+          <p>
+            Sausal es una comunidad ubicada en el distrito de Chicama,
+            provincia de Ascope, región La Libertad. La localidad es
+            conocida por el nombre de “Tierra del Eterno Sol”.
+          </p>
+
+          <p>
+            Su historia está relacionada con el desarrollo agrícola
+            del valle del río Chicama y con actividades que han formado
+            parte de la vida económica y social de la población.
+          </p>
+
+          <p>
+            La agricultura, el comercio y las actividades comunitarias
+            han tenido importancia en el desarrollo de Sausal.
+          </p>
+
+          <p>
+            La identidad local también se expresa mediante sus
+            festividades religiosas, espacios públicos, instituciones,
+            actividades deportivas y tradiciones.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+
+          <div class="timeline-dot">
+            1
+          </div>
+
+          <div>
+
+            <h3>
+              Orígenes y territorio
+            </h3>
+
+            <p>
+              El territorio de Sausal forma parte del valle del
+              Chicama y mantiene una relación histórica con la
+              agricultura y el aprovechamiento de sus tierras.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="timeline-dot">
+            2
+          </div>
+
+          <div>
+
+            <h3>
+              Desarrollo agrícola
+            </h3>
+
+            <p>
+              La agricultura ha sido una actividad importante para
+              la economía y la vida cotidiana de la comunidad.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="timeline-dot">
+            3
+          </div>
+
+          <div>
+
+            <h3>
+              Crecimiento de la comunidad
+            </h3>
+
+            <p>
+              Con el paso del tiempo se desarrollaron instituciones,
+              servicios, centros educativos, espacios deportivos y
+              lugares de encuentro para la población.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+          <div class="timeline-dot">
+            4
+          </div>
+
+          <div>
+
+            <h3>
+              Sausal en la actualidad
+            </h3>
+
+            <p>
+              Actualmente Sausal cuenta con diversos servicios,
+              instituciones, comercios, espacios públicos y
+              actividades que forman parte de su identidad.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         HISTORIA DE LUGARES
+    ========================== -->
+    <section class="section places-history">
+
+      <div class="section-title">
+
+        <span class="section-tag">
+          CONOCE CADA LUGAR
+        </span>
+
+        <h2>
+          Historia y contexto de lugares
+        </h2>
+
+      </div>
+
+
+      <div class="history-mini-grid">
+
+        <article class="mini-history">
+
+          <span>🏫</span>
+
+          <h3>
+            I.E. José Carlos Mariátegui
+          </h3>
+
+          <p>
+            La institución educativa José Carlos Mariátegui
+            forma parte de la comunidad educativa de Sausal.
+            Su creación está registrada el 17 de octubre de 1965.
+          </p>
+
+        </article>
+
+
+        <article class="mini-history">
+
+          <span>🏊</span>
+
+          <h3>
+            Piscina de Sausal
+          </h3>
+
+          <p>
+            Es un espacio recreativo y deportivo utilizado para
+            actividades acuáticas y de integración de la comunidad.
+          </p>
+
+        </article>
+
+
+        <article class="mini-history">
+
+          <span>🏪</span>
+
+          <h3>
+            Mercado de Abastos de Sausal
+          </h3>
+
+          <p>
+            Es un espacio destinado al comercio y abastecimiento
+            de productos para la población local.
+          </p>
+
+        </article>
+
+
+        <article class="mini-history">
+
+          <span>🌳</span>
+
+          <h3>
+            Parques y plazuelas
+          </h3>
+
+          <p>
+            Los parques y plazuelas funcionan como espacios de
+            encuentro, recreación y convivencia para los habitantes.
+          </p>
+
+        </article>
+
+
+        <article class="mini-history">
+
+          <span>⛰️</span>
+
+          <h3>
+            Cerro 1 de Mayo
+          </h3>
+
+          <p>
+            Este lugar aparece relacionado con actividades y
+            tradiciones comunitarias de Sausal.
+          </p>
+
+        </article>
+
+
+        <article class="mini-history">
+
+          <span>⛪</span>
+
+          <h3>
+            Festividades religiosas
+          </h3>
+
+          <p>
+            Entre las festividades mencionadas en fuentes locales
+            están la Virgen del Rosario, el Señor de los Milagros
+            y la Virgen de la Puerta.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHATSAPP RECOMENDACIÓN
+    ========================== -->
+    <section class="section recommendation" id="recomendacion">
+
+      <div class="recommendation-card">
+
+        <div class="recommendation-icon">
+          💬
+        </div>
+
+        <div class="recommendation-content">
+
+          <span class="section-tag">
+            ¿NO SABES A DÓNDE IR?
+          </span>
+
+          <h2>
+            Pídeme una recomendación
+          </h2>
+
+          <p>
+            Si necesitas encontrar un lugar de Sausal y no sabes
+            cuál elegir, puedes escribirme por WhatsApp y
+            preguntarme para recibir una recomendación.
+          </p>
+
+          <a
+            class="btn whatsapp-btn"
+            href="https://wa.me/51972372645?text=Hola%2C%20quiero%20que%20me%20recomiendes%20un%20lugar%20de%20Sausal."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            💬 Escribir por WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROYECTO EPT
+    ========================== -->
+    <section class="section project-section" id="proyecto">
+
+      <div class="section-title">
+
+        <span class="section-tag">
+          EPT
+        </span>
+
+        <h2>
+          Nuestro proyecto
+        </h2>
+
+      </div>
+
+
+      <div class="project-grid">
+
+        <article class="project-card">
+
+          <span>❗</span>
+
+          <h3>
+            Problema
+          </h3>
+
+          <p>
+            En Sausal existe información dispersa sobre lugares,
+            servicios, negocios, instituciones, actividades,
+            costumbres y atractivos de la comunidad. Esto dificulta
+            que habitantes y visitantes encuentren rápidamente
+            opciones y conozcan mejor la historia e identidad
+            de la localidad.
+          </p>
+
+        </article>
+
+
+        <article class="project-card">
+
+          <span>💡</span>
+
+          <h3>
+            Solución
+          </h3>
+
+          <p>
+            ProyecLab organiza esta información en un solo sitio
+            web para facilitar la búsqueda de lugares, servicios,
+            instituciones, actividades e información histórica
+            de Sausal.
+          </p>
+
+        </article>
+
+
+        <article class="project-card">
+
+          <span>🚀</span>
+
+          <h3>
+            Innovación
+          </h3>
+
+          <p>
+            La propuesta reúne información local en una plataforma
+            sencilla, visual e interactiva, incorporando categorías,
+            búsqueda, historias de lugares y accesos directos a
+            Google Maps.
+          </p>
+
+        </article>
+
+
+        <article class="project-card">
+
+          <span>🎯</span>
+
+          <h3>
+            Objetivo
+          </h3>
+
+          <p>
+            Facilitar que habitantes y visitantes conozcan,
+            encuentren y valoren los lugares, servicios,
+            actividades y patrimonio cultural de Sausal.
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FUENTES
+    ========================== -->
+    <section class="section sources-section">
+
+      <div class="section-title">
+
+        <span class="section-tag">
+          INFORMACIÓN
+        </span>
+
+        <h2>
+          Fuentes consultadas
+        </h2>
+
+        <p>
+          ProyecLab busca diferenciar entre información investigada
+          y datos que todavía necesitan confirmación local.
+        </p>
+
+      </div>
+
+
+      <div class="sources-list">
+
+        <a
+          href="https://iejcm.edu.pe/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🏫 I.E. José Carlos Mariátegui
+        </a>
+
+        <a
+          href="https://iejcm.edu.pe/quienes-somos/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          📚 Información institucional sobre Sausal
+        </a>
+
+        <a
+          href="https://comunicaciones.congreso.gob.pe/noticias/declaran-de-interes-nacional-creacion-del-distrito-de-sausal-en-la-libertad/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🏛️ Congreso de la República
+        </a>
+
+        <a
+          href="https://sausallalibertadperu.blogspot.com/2024/07/tradiciones.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🎭 Tradiciones locales de Sausal
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       WHATSAPP FLOTANTE
+  ========================== -->
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/51972372645?text=Hola%2C%20quiero%20que%20me%20recomiendes%20un%20lugar%20de%20Sausal."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+  >
+    💬
+  </a>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer>
+
+    <div class="footer-logo">
+      <span class="logo-icon">P</span>
+
+      <div>
+        <strong>ProyecLab</strong>
+        <small>Descubre Sausal</small>
+      </div>
+    </div>
+
+    <p>
+      “Descubre, conecta y valora Sausal.”
+    </p>
+
+    <small>
+      © <span id="year"></span> ProyecLab • Proyecto EPT
+    </small>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
